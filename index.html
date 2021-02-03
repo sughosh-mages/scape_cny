@@ -39,14 +39,20 @@
           preload="auto" id="vid" response-type="arraybuffer" loop="true"
           crossorigin webkit-playsinline autoplay playsinline>
       </video>
+      <a-asset-item id="model" src="models/CNY_Ox6/CNY_Ox6.gltf"></a-asset-item>
     </a-assets>
 
     <a-nft videohandler type='nft'
       url='markers/cny2021' smooth='true'
       smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
 
-      <a-video src="#vid" width='1753' height='1284' scale="0.28 0.28 0.28" position='250 0 -350' rotation='270 0 0'>
-      </a-video>
+      <!-- <a-video src="#vid" width='1753' height='1284' scale="0.28 0.28 0.28" position='250 0 -350' rotation='270 0 0'>
+      </a-video> -->
+
+      <a-entity gltf-model="#model"
+        scale="20 20 20"
+        position="250 175 -300"
+        rotation="-90 0 0"></a-entity>
 
     </a-nft>
     <a-entity camera></a-entity>
