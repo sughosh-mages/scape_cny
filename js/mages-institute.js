@@ -33,7 +33,7 @@ AFRAME.registerComponent("markerhandler", {
       marker.addEventListener('markerLost', function() {
         // this.model.removeAttribute('animation-mixer');
         // model.setAttribute('animation-mixer', {timeScale: 0});
-        model.setAttribute('animation-mixer', {clip: " "});
+        model.setAttribute('animation-mixer', {clip: "temp"});
       }.bind(this));
   }
 });
