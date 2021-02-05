@@ -26,12 +26,14 @@ AFRAME.registerComponent("markerhandler", {
 
       marker.addEventListener('markerFound', function () {
         // this.model.setAttribute('animation-mixer', {loop: "once", clampWhenFinished: "true"});
-        model.setAttribute('animation-mixer', {timeScale: 1});
+        // model.setAttribute('animation-mixer', {timeScale: 1});
+        model.setAttribute('animation-mixer', {clip: "*"});
       }.bind(this));
 
       marker.addEventListener('markerLost', function() {
         // this.model.removeAttribute('animation-mixer');
-        model.setAttribute('animation-mixer', {timeScale: 0});
+        // model.setAttribute('animation-mixer', {timeScale: 0});
+        model.setAttribute('animation-mixer', {clip: " "});
       }.bind(this));
   }
 });

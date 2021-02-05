@@ -12,10 +12,11 @@
   <!-- <script
     src='js/aframe-master.min.js'></script>
   <script src='js/aframe-ar-nft.js'></script> -->
-  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
   <!-- animation -->
   <script src='https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js'></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   <script src="js/mages-institute.js"></script>
 
 </head>
@@ -37,11 +38,13 @@
     arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
     <a-assets>
-      <video src="https://cdn.glitch.com/e3796de4-705d-4b33-a77c-084a0b428d27%2FAlphaTestVideo.webm?1552438409173"
+      <!-- <video src="https://cdn.glitch.com/e3796de4-705d-4b33-a77c-084a0b428d27%2FAlphaTestVideo.webm?1552438409173"
           preload="auto" id="vid" response-type="arraybuffer" loop="true"
           crossorigin webkit-playsinline autoplay playsinline>
-      </video>
-      <audio id="music" src="audios/CNYMusic.mp3" preload="auto" autoplay></audio>
+      </video> -->
+      <audio id="music" src="audios/CNYMusic.mp3"
+        preload="auto" response-type="arraybuffer" loop="true"
+        crossorigin webkit-playsinline autoplay playsinline></audio>
       <a-asset-item id="model" src="models/CNY_Ox9.glb"></a-asset-item>
     </a-assets>
 
@@ -49,7 +52,7 @@
       scale="5 5 5"
       position="0 -30 -300"
       rotation="0 0 0"
-      animation-mixer="loop: once; clampWhenFinished: true; timeScale: 0"></a-entity> -->
+      animation-mixer="loop: once; clampWhenFinished: true;"></a-entity> -->
 
     <a-nft markerhandler type='nft'
       url='markers/cny2021' smooth='true'
@@ -64,7 +67,7 @@
         scale="25 25 25"
         position="250 175 -200"
         rotation="-90 0 0"
-        animation-mixer="loop: once; clampWhenFinished: true; timeScale: 0"
+        animation-mixer="clip: ; loop: once; clampWhenFinished: true;"
       ></a-entity>
 
     </a-nft>
