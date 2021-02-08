@@ -12,7 +12,7 @@
   <!-- <script
     src='js/aframe-master.min.js'></script>
   <script src='js/aframe-ar-nft.js'></script> -->
-  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
   <!-- animation -->
@@ -44,9 +44,15 @@
       </video> -->
       <audio id="music" src="audios/CNYMusic.mp3"
         preload="auto" response-type="arraybuffer" loop="true"
-        crossorigin webkit-playsinline autoplay playsinline></audio>
+        crossorigin webkit-playsinline playsinline></audio>
       <a-asset-item id="model" src="models/CNY_Ox9.glb"></a-asset-item>
     </a-assets>
+
+    <!-- <a-sound src="src: url(audios/CNYMusic.mp3)" autoplay="true"></a-sound> -->
+    <!-- <a-sound src="src: #cnymusic"></a-sound> -->
+
+    <a-entity sound="src: #music" id="emusic"></a-entity>
+    <!-- <a-entity sound="src: url(audios/CNYMusic.mp3)" autoplay="true"></a-entity> -->
 
     <!-- <a-entity id="test" gltf-model="#model"
       scale="5 5 5"
@@ -60,8 +66,6 @@
 
       <!-- <a-video src="#vid" width='1753' height='1284' scale="0.28 0.28 0.28" position='250 0 -350' rotation='270 0 0'>
       </a-video> -->
-
-      <a-entity sound="src: #music"></a-entity>
 
       <a-entity id="emodel" gltf-model="#model"
         scale="25 25 25"
